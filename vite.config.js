@@ -11,5 +11,5 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-  base : "/Photography"
+  base : "/Photography/"
 })
