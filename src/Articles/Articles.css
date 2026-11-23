@@ -1,0 +1,16 @@
+.category-span.active{
+    background-image: linear-gradient(to right, oklch(0.705 0.213 47.604) 0%, oklch(0.646 0.222 41.116) 100%);
+    color: white;
+}
+#grid-toggle > button.active{
+    background-image: linear-gradient(to right, oklch(0.705 0.213 47.604) 0%, oklch(0.646 0.222 41.116) 100%);
+    color: white;
+}
+button.active{
+    background-image: linear-gradient(to right, oklch(0.705 0.213 47.604) 0%, oklch(0.646 0.222 41.116) 100%);
+    color: white;
+}
+button.disabled{
+    background-color: #0a0a0a;
+    cursor: not-allowed;
+}

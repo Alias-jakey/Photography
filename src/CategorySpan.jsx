@@ -1,0 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+export default function CategorySpan({text , id , event , currentIdx}){
+    return (<button className="my-3" onClick={()=>{event(id)}}><span className={id == currentIdx ? "category-span font-[400] text-neutral-400 py-2 px-3 border-1 border-gray-800 bg-neutral-900 my-1 transition-all duration-300 hover:border-orange-600 active me-3 rounded-xl" : "category-span font-[400] text-neutral-400 py-2 px-3 border-1 border-gray-800 bg-neutral-900 my-1 transition-all duration-300 hover:border-orange-600 me-3 rounded-xl"} >{text}</span></button>)
+}
