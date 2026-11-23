@@ -3,7 +3,7 @@ import { faStar , faArrowLeftLong , faClock, faChevronLeft} from "@fortawesome/f
 export default function Article({type , tagIsHidden , data}){
     const {id , title , author , readTime , date , image , excerpt , slug} = data
     return (
-        <a href={"./articles/" + slug}>
+        <a href={"/photography/articles/" + slug}>
             <div className="grid-cols-2 grid group hover:border-1 border-1 border-gray-800 hover:border-orange-600 rounded-2xl transition-all duration-200" id={id}>
                 <div className={ type == "horizontal" ? "col-span-2 md:col-span-1 relative overflow-hidden max-h-[15rem] md:max-h-[25rem] rounded-s-2xl" : "col-span-2 relative overflow-hidden rounded-t-2xl"}>
                     <img src={image} alt="something something" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"/>

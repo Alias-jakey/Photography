@@ -15,11 +15,11 @@ import Terms from './terms/terms.jsx'
 import ArticleInfo from './ArticleInfo/ArticleInfo.jsx'
 const articlesChildren = []
 posts.forEach((post)=>{
-   articlesChildren.push({path : `/articles/${post.slug}`, element : <ArticleInfo post={post}/>})
+   articlesChildren.push({path : `/photography/articles/${post.slug}`, element : <ArticleInfo post={post}/>})
 })
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/photography",
     element: <Layout/>,
     children: [
       {
@@ -27,19 +27,19 @@ const router = createBrowserRouter([
         element : <Home/>
       },
       {
-        path: "/about",
+        path: "/photography/about",
         element: <About/>
       },{
-        path: "/articles",
+        path: "/photography/articles",
         element: <Articles/>,
         children : articlesChildren
       },
       {
-        path : "/privacy",
+        path : "/photography/privacy",
         element : <Privacy/>
       },
       {
-        path : "/terms",
+        path : "/photography/terms",
         element : <Terms/>
       }
     ]

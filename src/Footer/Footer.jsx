@@ -88,8 +88,8 @@ export default function Footer(){
                         <span className="text-gray-600 font-[400] text-sm mx-1"> جميع الحقوق محفوظة.</span>
                     </div>
                     <div>
-                        <a href="/privacy" className="text-gray-600 font-[400] text-sm mx-1 transition-all duration-300 hover:text-orange-600">سياسة الخصوصية</a>
-                        <a href="/terms" className="text-gray-600 font-[400] text-sm mx-1 transition-all duration-300 hover:text-orange-600">شروط الخدمة</a>
+                        <a href="/photography/privacy" className="text-gray-600 font-[400] text-sm mx-1 transition-all duration-300 hover:text-orange-600">سياسة الخصوصية</a>
+                        <a href="/photography/terms" className="text-gray-600 font-[400] text-sm mx-1 transition-all duration-300 hover:text-orange-600">شروط الخدمة</a>
                     </div>
                 </div>          
             </div>

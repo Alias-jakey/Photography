@@ -23,7 +23,7 @@ export default function ArticleInfo({post}){
                     <div className="rounded-full w-fit flex items-center justify-center bg-black/30 backdrop-blur-md p-1 space-x-1">
                         <FontAwesomeIcon icon={faHome} className="fa-sm text-neutral-300 "/>
                         <FontAwesomeIcon icon={faChevronLeft} className="fa-sm text-neutral-300 "/>
-                        <a href="/articles" className="text-neutral-300 hover:text-neutral-100 transition-all duration-300 text-sm">
+                        <a href="/photography/articles" className="text-neutral-300 hover:text-neutral-100 transition-all duration-300 text-sm">
 المدونة</a>
                         <FontAwesomeIcon icon={faChevronLeft} className="fa-md text-neutral-300 text-sm "/>
                         <span className="text-neutral-300 text-sm">{category}</span>
@@ -132,7 +132,7 @@ export default function ArticleInfo({post}){
                                 <span className="text-orange-600 text-2xl size-[4rem] flex items-center justify-center bg-orange-600/10 rounded-xl"><FontAwesomeIcon icon={faEnvelope}/></span>
                                 <span className="text-white text-lg font-bold my-1">لا تفوّت جديدنا</span>
                                 <span className="text-gray-300 text-md my-1">اشترك للحصول على أحدث المقالات</span>
-                                <button className="text-white font-bold w-[90%] py-2 rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 my-1"><a href="/articles">تصفح المزيد</a></button>
+                                <button className="text-white font-bold w-[90%] py-2 rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 my-1"><a href="/photography/articles">تصفح المزيد</a></button>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@ export default function ArticleInfo({post}){
                                     <span className="text-sm text-gray-300  ms-4">استكشف المزيد من المحتوى المميز</span>
                                 </div>
                             </div>
-                                <a href="/articles" className="group transition-all flex items-center justify-center duration-300 text-orange-600 hover:text-orange-400">عرض الكل
+                                <a href="/photography/articles" className="group transition-all flex items-center justify-center duration-300 text-orange-600 hover:text-orange-400">عرض الكل
                                     <FontAwesomeIcon icon={faArrowLeftLong} className="ms-2 group-hover:-translate-x-2 transition-all duration-300" />
                                 </a>
                         </div>

@@ -74,7 +74,7 @@ export default function About(){
                     </div>
                     <div className="flex md:flex-row flex-col items-center justify-center">
                         <button className="bg-black text-white text-md hover:-translate-y-1 transition-all hover:bg-black/90 py-4 px-6 md:w-fit w-full mx-2 rounded-xl font-bold duration-300 flex items-center justify-center my-2"><FontAwesomeIcon icon={faEnvelope} className="me-2"/>تواصل معنا</button>
-                        <button className="bg-transparent text-white text-md transition-all hover:bg-white hover:text-black border-1 border-white mx-2  py-4 px-6 md:w-fit w-full rounded-xl font-bold duration-300 flex items-center justify-center my-2"><FontAwesomeIcon icon={faEnvelope} className="me-2"/><a href="/articles">تصفح المقالات</a></button>
+                        <button className="bg-transparent text-white text-md transition-all hover:bg-white hover:text-black border-1 border-white mx-2  py-4 px-6 md:w-fit w-full rounded-xl font-bold duration-300 flex items-center justify-center my-2"><FontAwesomeIcon icon={faEnvelope} className="me-2"/><a href="/photography/articles">تصفح المقالات</a></button>
                     </div>
                 </div>
             </section>

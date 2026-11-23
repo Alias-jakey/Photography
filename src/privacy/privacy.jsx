@@ -9,7 +9,7 @@ export default function Privacy(){
             <div className="2xl:w-7xl mx-auto xl:px-[20rem]">
                 <div className="flex items-center justify-center flex-col text-center">
                     <div className="flex items-center justify-content my-4">
-                        <a href="/" className="text-gray-600 text-sm transition-all duration-300 hover:text-orange-600">الرئيسية</a>
+                        <a href="/photography" className="text-gray-600 text-sm transition-all duration-300 hover:text-orange-600">الرئيسية</a>
                         <FontAwesomeIcon icon={faChevronLeft} className="text-gray-600 mx-2"/>
                         <span className="text-orange-600 text-sm">سياسة الخصوصية</span>
                     </div>
@@ -137,7 +137,7 @@ export default function Privacy(){
                 </div>
                 <div className="flex items-center justify-center py-10">
                     <span className="text-gray-600 text-sm">باستخدام موقعنا، فإنك توافق على سياسة الخصوصية هذه. انظر أيضاً</span>
-                    <a href="/terms" className="text-orange-600 text-sm mx-1 hover:text-orange-300 transition-all duration-300">شروط الخدمة.</a>
+                    <a href="/photography/terms" className="text-orange-600 text-sm mx-1 hover:text-orange-300 transition-all duration-300">شروط الخدمة.</a>
                 </div>
             </section>
         </main>

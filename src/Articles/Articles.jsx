@@ -62,7 +62,7 @@ export default function Articles(){
         return tempPages
     }
     
-    if(window.location.pathname == "/articles"){
+    if(window.location.pathname == "/photography/articles"){
         return(
             <>  
             <main>
