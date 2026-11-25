@@ -4,15 +4,17 @@ import { faXTwitter , faGithub , faYoutube , faLinkedin } from "@fortawesome/fre
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./ArticleInfo.css"
 import Social  from "../Social.jsx"
+import {posts} from "../posts.json"
 import ArticleInfoDesc from "../ArticleInfoDescription";
+import ShortArticle from "../ShortArticle.jsx";
 const socials = [[faXTwitter , "https://twitter.com/adasah"] 
 , [ faGithub , "https://github.com/adasah" ],
 [faLinkedin , "https://linkedin.com/company/adasah"],
 [faYoutube , "https://youtube.com/@adasah"]
 ]
 export default function ArticleInfo({post}){
-    const {image , category , date , readTime , title , author , excerpt , tags} = post
-    
+    const {image , category  , date , readTime , title , author , excerpt , tags , id} = post
+    let x = 0;
     const content = post.content.split("\n\n")
     return (
         <main>
@@ -53,9 +55,47 @@ export default function ArticleInfo({post}){
             </section>
             <section id="info-section" className="py-10 overflow-hidden bg-black">
                 <div className="2xl:w-7xl mx-auto">
-                <div className="flex items-start justify-center border-b-1 border-gray-800/50 py-6">
-                    <div className="flex-col flex items-start justify-center w-3/4 pe-8">
-                        <div className="bg-linear-to-l rounded-xl from-black/50 to-orange-600/50 w-full border-1 border-orange-800/50 p-6 text-lg text-gray-300">
+                <div className="flex lg:flex-row-reverse flex-col items-start justify-center border-b-1 border-gray-800/50 py-6">
+                    <div className="w-full lg:sticky top-0 ps-8 h-full lg:w-1/4 px-4">
+                        <div className="flex-col flex items-start justify-center border-gray-800/50 border-1 rounded-xl bg-olive-950 px-6 mb-6">
+                                <div className="flex items-center justify-start p-4">
+                                    <span className="text-orange-600 p-2 py-3 flex items-start justify-start border-1 rounded-lg border-orange-800 bg-black/50"><FontAwesomeIcon icon={faList} /></span>
+                                    <span className="text-lg font-bold ms-4 text-white ">محتويات المقال</span>
+                                </div>
+                                {content.map((content , idx)=>{
+                                    if(content.includes("#")){
+                                        return (
+                                            <a href={`#${content.slice(2)}`} className="transition-all duration-300 group hover:bg-orange-600/10 w-[100%] p-2 flex items-center justify-start mb-6 rounded-xl">
+                                            <span className="transition-all duration-300 px-4 py-2 text-sm me-2 text-gray-300 group-hover:text-orange-600 bg-gray-100/5 rounded-xl ms-4" >{Math.round(idx/2)}</span>
+                                            <span className="transition-all duration-300 p-2 text-sm me-2 text-gray-300 group-hover:text-orange-600">{content.slice(2)}</span>
+                                        </a>
+                                        )
+                                    }
+                                })}
+                        </div>
+                        <div className="border-gray-800/50 border-1 rounded-xl bg-olive-950 px-6 mb-6">
+                            <div className="flex items-stretch justify-center py-4">
+                                <div className="bg-black rounded-xl p-2 flex flex-col items-center justify-center  h-full mx-2 w-full">
+                                    <FontAwesomeIcon icon={faClock} className="text-orange-600 fa-lg mb-2"/>
+                                    <span className="text-white font-bold text-lg text-center">{readTime}</span>
+                                    <span className="text-white  text-sm text-center">وقت القراءة</span>
+                                </div>
+                                <div className="bg-black rounded-xl p-2 flex flex-col items-center text-center justify-center  mx-2 w-full">
+                                    <FontAwesomeIcon icon={faCalendar} className="text-orange-600 fa-lg mb-2"/>
+                                    <span className="text-white font-bold text-sm text-center">{date}</span>
+                                    <span className="text-white  text-sm text-center">تاريخ النشر</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex-col flex items-center justify-center border-orange-300/50 border-1 rounded-xl p-6 bg-orange-600/10">
+                                <span className="text-orange-600 text-2xl size-[4rem] flex items-center justify-center bg-orange-600/10 rounded-xl"><FontAwesomeIcon icon={faEnvelope}/></span>
+                                <span className="text-white text-lg font-bold my-1">لا تفوّت جديدنا</span>
+                                <span className="text-gray-300 text-md my-1">اشترك للحصول على أحدث المقالات</span>
+                                <button className="text-white font-bold w-[90%] py-2 rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 my-1"><a href="/photography/articles">تصفح المزيد</a></button>
+                        </div>
+                    </div>
+                    <div className="flex-col flex items-start justify-center lg:w-3/4 pe-8 w-full px-4">
+                        <div className="bg-linear-to-l mt-6 rounded-xl from-black/50 to-orange-600/50 w-full border-1 border-orange-800/50 p-6 text-lg text-gray-300">
                            <i> "{excerpt}" </i>
                         </div>
                         <p className="text-lg text-gray-300 my-12">{content[0]}</p>
@@ -97,50 +137,12 @@ export default function ArticleInfo({post}){
                                 </div>
                         </div>
                     </div>
-                    <div className="w-1/4 sticky top-0 ps-8 h-full">
-                        <div className="flex-col flex items-center justify-center border-gray-800/50 border-1 rounded-xl bg-olive-950 px-6 mb-6">
-                                <div className="flex items-center justify-start p-4">
-                                    <span className="text-orange-600 p-2 py-3 flex items-center justify-center border-1 rounded-lg border-orange-800 bg-black/50"><FontAwesomeIcon icon={faList} /></span>
-                                    <span className="text-lg font-bold ms-4 text-white ">محتويات المقال</span>
-                                </div>
-                                {content.map((content , idx)=>{
-                                    if(content.includes("#")){
-                                        return (
-                                            <a href={`#${content.slice(2)}`} className="transition-all duration-300 group hover:bg-orange-600/10 w-[100%] p-2 flex items-center justify-start mb-6 rounded-xl">
-                                            <span className="transition-all duration-300 px-4 py-2 text-sm me-2 text-gray-300 group-hover:text-orange-600 bg-gray-100/5 rounded-xl ms-4" >{Math.round(idx/2)}</span>
-                                            <span className="transition-all duration-300 p-2 text-sm me-2 text-gray-300 group-hover:text-orange-600">{content.slice(2)}</span>
-                                        </a>
-                                        )
-                                    }
-                                })}
-                        </div>
-                        <div className="border-gray-800/50 border-1 rounded-xl bg-olive-950 px-6 mb-6">
-                            <div className="flex items-stretch justify-center py-4">
-                                <div className="bg-black rounded-xl p-2 flex flex-col items-center justify-center  h-full mx-2 w-full">
-                                    <FontAwesomeIcon icon={faClock} className="text-orange-600 fa-lg mb-2"/>
-                                    <span className="text-white font-bold text-lg text-center">{readTime}</span>
-                                    <span className="text-white  text-sm text-center">وقت القراءة</span>
-                                </div>
-                                <div className="bg-black rounded-xl p-2 flex flex-col items-center text-center justify-center  mx-2 w-full">
-                                    <FontAwesomeIcon icon={faCalendar} className="text-orange-600 fa-lg mb-2"/>
-                                    <span className="text-white font-bold text-sm text-center">{date}</span>
-                                    <span className="text-white  text-sm text-center">تاريخ النشر</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex-col flex items-center justify-center border-orange-300/50 border-1 rounded-xl p-6 bg-orange-600/10">
-                                <span className="text-orange-600 text-2xl size-[4rem] flex items-center justify-center bg-orange-600/10 rounded-xl"><FontAwesomeIcon icon={faEnvelope}/></span>
-                                <span className="text-white text-lg font-bold my-1">لا تفوّت جديدنا</span>
-                                <span className="text-gray-300 text-md my-1">اشترك للحصول على أحدث المقالات</span>
-                                <button className="text-white font-bold w-[90%] py-2 rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 my-1"><a href="/photography/articles">تصفح المزيد</a></button>
-                        </div>
-                    </div>
                 </div>
                 </div>
             </section>
             <section id="other-content-section" className="py-4 overflow-hidden bg-black">
                 <div className="2xl:w-7xl mx-auto">
-                    <div className="flex flex-col items-start justify-center">
+                    <div className="flex flex-col items-start justify-center px-4">
                         <div className="flex items-center justify-between w-full">
                             <div className="flex items-center justify-center">
                                 <div className="border-1 border-orange-800 bg-black/50 p-3 text-xl text-orange-600 flex items-center justify-center rounded-xl "><FontAwesomeIcon icon={faImages}/></div>
@@ -150,9 +152,19 @@ export default function ArticleInfo({post}){
                                     <span className="text-sm text-gray-300  ms-4">استكشف المزيد من المحتوى المميز</span>
                                 </div>
                             </div>
-                                <a href="/photography/articles" className="group transition-all flex items-center justify-center duration-300 text-orange-600 hover:text-orange-400">عرض الكل
-                                    <FontAwesomeIcon icon={faArrowLeftLong} className="ms-2 group-hover:-translate-x-2 transition-all duration-300" />
-                                </a>
+                            <a href="/photography/articles" className="group transition-all flex items-center justify-center sm:flex hidden duration-300 text-orange-600 hover:text-orange-400">عرض الكل
+                                <FontAwesomeIcon icon={faArrowLeftLong} className="ms-2 group-hover:-translate-x-2 transition-all duration-300" />
+                            </a>
+                        </div>
+                        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-4 gap-y-6 py-6">
+                            {posts.map((post)=>{
+                                
+                                if(post.category == category && x < 3 && post.id != id){
+                                    x++;
+                                    return <ShortArticle post={post}/>
+                                }
+                            }
+                            )}
                         </div>
                     </div>
                 </div>

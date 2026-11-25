@@ -33,15 +33,15 @@ export default function Footer(){
                         <ul className="space-y-6 w-full">
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">الرئيسية</a>
+                                <a href="/photography" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">الرئيسية</a>
                             </li>
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">المدونة</a>
+                                <a href="/photography/articles" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">المدونة</a>
                             </li>
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">من نحن</a>
+                                <a href="/photography/about" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">من نحن</a>
                             </li>
                         </ul>
                     </div>
@@ -50,19 +50,19 @@ export default function Footer(){
                         <ul className="space-y-6 w-full">
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">إضاءة</a>
+                                <a href="/photography/articles?category=0" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">إضاءة</a>
                             </li>
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">بورتريه</a>
+                                <a href="/photography/articles?category=1" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4">بورتريه</a>
                             </li>
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4"> مناظر طبيعية</a>
+                                <a href="/photography/articles?category=2" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4"> مناظر طبيعية</a>
                             </li>
                             <li className="flex items-center justify-center space-x-4 group">
                                 <FontAwesomeIcon icon={faChevronLeft} className="hidden text-orange-400 transition-all duration-300 fa-sm group-hover:-translate-x-4 group-hover:block opacity-0 group-hover:opacity-100"/>
-                                <a className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4"> تقنيات</a>
+                                <a href="/photography/articles?category=3" className="text-gray-600 text-sm group-hover:text-orange-400 transition-all duration-300 w-full block group-hover:-translate-x-4"> تقنيات</a>
                             </li>
                         </ul>
                     </div>

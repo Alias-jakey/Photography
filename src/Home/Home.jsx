@@ -96,13 +96,13 @@ export default function Home(){
                             </div>
                             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
                                 <div className="m-2">
-                                    <Article type={"vetical"} tagIsHidden={true} data={posts[0]}/>
+                                    <Article type={"vetical"} tagIsHidden={true} data={posts[5]}/>
                                 </div >
                                  <div className="m-2">
-                                    <Article type={"vetical"} tagIsHidden={true} data={posts[0]}/>
+                                    <Article type={"vetical"} tagIsHidden={true} data={posts[9]}/>
                                 </div>
                                  <div className="m-2">
-                                    <Article type={"vetical"} tagIsHidden={true} data={posts[0]}/>
+                                    <Article type={"vetical"} tagIsHidden={true} data={posts[11]}/>
                                 </div>
 
                             </div>

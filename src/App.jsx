@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from "react-router";
 import Privacy from './privacy/privacy.jsx'
+import ErrorPage from './ErrorPage/ErrorPage.jsx'
 import Terms from './terms/terms.jsx'
 import ArticleInfo from './ArticleInfo/ArticleInfo.jsx'
 const articlesChildren = []
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path : "/photography/terms",
         element : <Terms/>
+      },
+      {
+        path : "*",
+        element : <ErrorPage/>
       }
     ]
   },
